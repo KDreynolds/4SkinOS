@@ -1,13 +1,29 @@
 # 4SkinOS
 
-4SkinOS is a bare-metal operating system for ESP32 microcontrollers, providing a simple shell interface and basic filesystem operations.
+4SkinOS is a custom operating system for ESP32 microcontrollers, built on top of FreeRTOS and the ESP-IDF framework. It provides a shell interface, basic filesystem operations, and a platform for embedded application development.
 
 ## Features
 
-- Custom shell interface
-- Basic filesystem operations (create, read, write, delete files and directories)
-- Simple in-memory filesystem implementation
-- ESP32-specific optimizations
+- Custom operating system for ESP32
+- Interactive shell interface
+- In-memory filesystem with basic operations
+- Task management and scheduling (leveraging FreeRTOS)
+- Hardware abstraction layer (utilizing ESP-IDF)
+
+## Architecture
+
+4SkinOS is structured as follows:
+
+1. Hardware: ESP32 microcontroller
+2. Low-level drivers: ESP-IDF framework
+3. Real-time kernel: FreeRTOS
+4. Operating System: 4SkinOS
+   - Shell interface
+   - Filesystem management
+   - Task and resource management
+   - System calls and APIs
+
+While 4SkinOS uses FreeRTOS and ESP-IDF, it extends their functionality to create a complete, custom operating system environment.
 
 ## Getting Started
 
