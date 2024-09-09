@@ -1,0 +1,118 @@
+,���ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7112
+load:0x40078000,len:15788
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.4-dev-2744-g59e1838270 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep  6 2024 16:03:09[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b5fch ( 46588) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001b624 vaddr=3ffb0000 size=0240ch (  9228) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=0001da38 vaddr=40080000 size=025e0h (  9696) load[0m
+[0;32mI (132) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1fc4ch (130124) map[0m
+[0;32mI (181) esp_image: segment 4: paddr=0003fc74 vaddr=400825e0 size=0b744h ( 46916) load[0m
+[0;32mI (206) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (206) boot: Disabling RNG early entropy source...[0m
+[0;32mI (219) cpu_start: Multicore app[0m
+[0;32mI (227) cpu_start: Pro cpu start user code[0m
+[0;32mI (227) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (227) app_init: Application information:[0m
+[0;32mI (230) app_init: Project name:     4SkinOS[0m
+[0;32mI (235) app_init: App version:      1[0m
+[0;32mI (240) app_init: Compile time:     Sep  8 2024 20:20:36[0m
+[0;32mI (246) app_init: ELF file SHA256:  6cbc01557...[0m
+[0;32mI (251) app_init: ESP-IDF:          v5.4-dev-2744-g59e1838270[0m
+[0;32mI (257) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (262) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (267) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFC37D8 len 0001C828 (114 KiB): DRAM[0m
+[0;32mI (291) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (298) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008DD24 len 000122DC (72 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (333) main_task: Started on CPU0[0m
+[0;32mI (343) main_task: Calling app_main()[0m
+4SkinOS Kernel starting... (Version 3)
+Initializing shell...
+Filesystem initialized. Root directory created.
+Shell initialized.
+
+ /$$   /$$  /$$$$$$  /$$   /$$ /$$$$$$ /$$   /$$       /$$$$$$   /$$$$$$ 
+| $$  | $$ /$$__  $$| $$  /$$/|_  $$_/| $$$ | $$      /$$    $$ /$$__  $$
+| $$  | $$| $$  \__/| $$ /$$/   | $$  | $$$$| $$     | $$    $$| $$  \__/
+| $$$$$$$$|  $$$$$$ | $$$$$/    | $$  | $$ $$ $$     | $$    $$|  $$$$$$ 
+|_____  $$ \____  $$| $$  $$    | $$  | $$  $$$$     | $$    $$ \____  $$
+      | $$ /$$  \ $$| $$\  $$   | $$  | $$\  $$$     | $$    $$ /$$  \ $$
+      | $$|  $$$$$$/| $$ \  $$ /$$$$$$| $$ \  $$     |  $$$$$$/|  $$$$$$/
+      |__/ \______/ |__/  \__/|______/|__/  \__/      \______/  \______/ 
+
+Welcome to 4SKIN OS - Your Bare-Metal Experience
+Version 1.0 - (c) 2024 4SKIN OS - @IMYERF
+
+4SkinOS> pwd
+/
+4SkinOS> mkdir /tye    test
+Attempting to create directory: test
+Directory created successfully:  (0 bytes)
+4SkinOS> ls
+Attempting to list files in: .
+Contents of /:
+test/
+4SkinOS> cd test
+Attempting to change directory to: test
+Changed directory to: /test
+4SkinOS> touch text.txt
+Attempting to create file: text.txt
+4SkinOS> ls
+Attempting to list files in: .
+Contents of test:
+(empty)
+4SkinOS> wirte      rei  ite text.txc t 'W HelloWo    ,m    Wior   orld'
+Attempting to write to file: text.txt
+Attempting to create file: text.txt
+Failed to create file: text.txt
+4SkinOS> ls
+Attempting to list files in: .
+Contents of test:
+(empty)
+4SkinOS> cd ..
+Attempting to change directory to: ..
+4SkinOS> ls
+Attempting to list files in: .
+Contents of /:
+test/
+4SkinOS> help
+Available commands:
+  help - Show this help message
+  reboot - Reboot the system
+  ls [path] - List files in the current or specified directory
+  cd <path> - Change current directory
+  pwd - Print working directory
+  mkdir <path> - Create a new directory
+  touch <filename> - Create a new file
+  write <filename> <content> - Write content to a file
+  read <filename> - Read content from a file
+  rm <path> - Delete a file or empty directory
+4SkinOS> [A[A[B[B[B[B

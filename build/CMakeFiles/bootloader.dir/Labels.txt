@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/frey/4SkinOS/build/CMakeFiles/bootloader
+/home/frey/4SkinOS/build/CMakeFiles/bootloader.rule
+/home/frey/4SkinOS/build/CMakeFiles/bootloader-complete.rule
+/home/frey/4SkinOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/frey/4SkinOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/frey/4SkinOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/frey/4SkinOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/frey/4SkinOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/frey/4SkinOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/frey/4SkinOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
