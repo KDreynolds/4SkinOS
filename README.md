@@ -1,53 +1,74 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | -------- | -------- | -------- | ----- |
+# 4SkinOS
 
-# Hello World Example
+4SkinOS is a bare-metal operating system for ESP32 microcontrollers, providing a simple shell interface and basic filesystem operations.
 
-Starts a FreeRTOS task to print "Hello World".
+## Features
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+- Custom shell interface
+- Basic filesystem operations (create, read, write, delete files and directories)
+- Simple in-memory filesystem implementation
+- ESP32-specific optimizations
 
-## How to use example
+## Getting Started
 
-Follow detailed instructions provided specifically for this example.
+### Prerequisites
 
-Select the instructions depending on Espressif chip installed on your development board:
+- ESP-IDF (Espressif IoT Development Framework)
+- ESP32 development board
 
-- [ESP32 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/index.html)
-- [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
+### Building and Flashing
 
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/4SkinOS.git
+   cd 4SkinOS
+   ```
 
-## Example folder contents
+2. Set up the ESP-IDF environment:
+   ```
+   . $HOME/esp/esp-idf/export.sh
+   ```
 
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
+3. Configure the project:
+   ```
+   idf.py menuconfig
+   ```
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
+4. Build the project:
+   ```
+   idf.py build
+   ```
 
-Below is short explanation of remaining files in the project folder.
+5. Flash the project to your ESP32:
+   ```
+   idf.py -p /dev/ttyUSB0 flash monitor
+   ```
+   Replace `/dev/ttyUSB0` with the appropriate port for your system.
 
-```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
-```
+## Usage
 
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
+Once flashed, the system will boot into a shell interface. Available commands include:
 
-## Troubleshooting
+- `help`: Show available commands
+- `reboot`: Reboot the system
+- `ls [path]`: List files in the current or specified directory
+- `cd <path>`: Change current directory
+- `pwd`: Print working directory
+- `mkdir <path>`: Create a new directory
+- `touch <filename>`: Create a new file
+- `write <filename> <content>`: Write content to a file
+- `read <filename>`: Read content from a file
+- `rm <path>`: Delete a file or empty directory
 
-* Program upload failure
+## Contributing
 
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Technical support and feedback
+## License
 
-Please use the following feedback channels:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
+## Acknowledgments
 
-We will get back to you as soon as possible.
+- Espressif for the ESP-IDF framework
+- FreeRTOS for the real-time operating system
